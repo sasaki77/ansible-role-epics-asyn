@@ -1,0 +1,26 @@
+- name: Common task for asyn module
+  include_role: 
+    name: ansible-role-epics-base
+    tasks_from: module_common
+  with_items:
+    - "{{ epics_asyn_module }}"
+  loop_control:
+    loop_var: module
+
+- name: Configure release for asyn module
+  include_role: 
+    name: ansible-role-epics-base
+    tasks_from: module_configure_release
+  with_items:
+    - "{{ epics_asyn_module }}"
+  loop_control:
+    loop_var: module
+
+- name: Make asyn module
+  include_role: 
+    name: ansible-role-epics-base
+    tasks_from: module_make
+  with_items:
+    - "{{ epics_asyn_module }}"
+  loop_control:
+    loop_var: module
