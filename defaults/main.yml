@@ -2,7 +2,7 @@ epics_asyn_module:
   name: "asyn"
   type: "soft"
   ver: "4-31"
-  url: "https://www.aps.anl.gov/epics/download/modules/asyn4-31.tar.gz"
+  url: "https://epics.anl.gov/epics/download/modules/asyn4-31.tar.gz"
   unarchived_name: "asyn4-31"
   configure_release:
       - {name: "EPICS_BASE", path: "{{ epics_base_base_name }}", reg: "^(.*)EPICS_BASE(.*)=(.*)$"}
